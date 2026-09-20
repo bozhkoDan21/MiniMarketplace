@@ -1,0 +1,29 @@
+﻿{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "API",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/Marketplace.Api/bin/Debug/net10.0/Marketplace.Api.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/Marketplace.Api",
+      "env": { "ASPNETCORE_ENVIRONMENT": "Development" },
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+      }
+    },
+    {
+      "name": "Workers",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/Marketplace.Workers/bin/Debug/net10.0/Marketplace.Workers.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/Marketplace.Workers",
+      "env": { "DOTNET_ENVIRONMENT": "Development" }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+﻿# Auto-detect text files, normalize to LF in repo, OS-specific on checkout
+* text=auto
+
+# Explicitly declare text files (LF in repo)
+*.cs        text diff=csharp
+*.csproj    text
+*.sln       text
+*.slnx      text
+*.json      text
+*.md        text
+*.yml       text
+*.yaml      text
+*.xml       text
+*.http      text
+
+# Windows scripts
+*.ps1       text eol=crlf
+*.cmd       text eol=crlf
+*.bat       text eol=crlf
+
+# Unix scripts
+*.sh        text eol=lf
+
+# Binary files
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.pdf       binary
+*.zip       binary
+*.dll       binary
+*.exe       binary
+*.pdb       binary
+
+# Git-specific
+.gitattributes  text
+.gitignore      text
+
+# Linguist: mark docs as documentation
+docs/**         linguist-documentation
+postman/**      linguist-documentation
